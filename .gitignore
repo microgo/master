@@ -1,0 +1,11 @@
+# OS Files
+.DS_Store
+
+# Constant
+constant.go
+
+# Builds
+master
+
+# Tmp
+tmp/*
