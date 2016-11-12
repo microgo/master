@@ -9,8 +9,8 @@ const (
 
 	RabbitHost = "mochi"
 	RabbitPort = "5672"
-	RabbitUser = "feels"
-	RabbitPass = "feels536"
+	RabbitUser = "boo"
+	RabbitPass = "boo"
 
 	RedisHost = "mochi"
 	RedisPort = "6379"
@@ -18,7 +18,7 @@ const (
 
 	ElasticHost     = "http://mochi"
 	ElasticPort     = "9200"
-	ElasticNamspace = "pixai"
+	ElasticNamspace = "boo"
 
 	AppHashKey  = "Z14k4cLmu0d1vRs6k98DgK1dJFhof2ud2BATaLd7pBhPcvIxbTs8j86fJSrRGoW9"
 	AppBlockKey = "ho3Gc3Mioy6cT8y1"
