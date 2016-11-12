@@ -128,7 +128,6 @@ func readTextFromFile(fileName string) (string, error) {
 func Init(config ResourceConfig) (*Resource, error) {
 	r := Resource{}
 	r.Config = config
-
 	if config.IsEnablePostgres {
 		pq, err := initPostgreSQL()
 		if err != nil {
@@ -148,7 +147,6 @@ func Init(config ResourceConfig) (*Resource, error) {
 		}
 		r.Redis = redisClient
 	}
-
 	if config.IsEnableRabbit {
 		rabbit, err := initRabbit()
 		if err != nil {
@@ -157,11 +155,9 @@ func Init(config ResourceConfig) (*Resource, error) {
 		}
 		r.Rabbit = rabbit
 	}
-
 	if config.IsEnableElastic {
 		elastic := initElastic()
 		r.Elastic = elastic
 	}
-
 	return &r, nil
 }
