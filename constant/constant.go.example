@@ -1,0 +1,25 @@
+package constant
+
+const (
+	PostgresHost     = "mochi"
+	PostgresPort     = "5432"
+	PostgresUser     = "boo"
+	PostgresDB       = "mug"
+	PostgresPassword = "boo"
+
+	RabbitHost = "mochi"
+	RabbitPort = "5672"
+	RabbitUser = "feels"
+	RabbitPass = "feels536"
+
+	RedisHost = "mochi"
+	RedisPort = "6379"
+	RedisPass = ""
+
+	ElasticHost     = "http://mochi"
+	ElasticPort     = "9200"
+	ElasticNamspace = "pixai"
+
+	AppHashKey  = "Z14k4cLmu0d1vRs6k98DgK1dJFhof2ud2BATaLd7pBhPcvIxbTs8j86fJSrRGoW9"
+	AppBlockKey = "ho3Gc3Mioy6cT8y1"
+)
