@@ -48,8 +48,6 @@ func (r *Helper) MakeConsume(name string, ch *amqp.Channel, handler HandlerFunc)
 		fmt.Println("[ERROR] Make consume failed", err)
 		panic(err)
 	}
-
-	forever := make(chan bool)
 	go func() {
 		for d := range msgs {
 			handler(&d)
@@ -59,7 +57,6 @@ func (r *Helper) MakeConsume(name string, ch *amqp.Channel, handler HandlerFunc)
 			}
 		}
 	}()
-	<-forever
 }
 
 func (r *Helper) MakeConsumeWithTag(name string, tag string, ch *amqp.Channel, handler HandlerFunc) {
@@ -77,7 +74,6 @@ func (r *Helper) MakeConsumeWithTag(name string, tag string, ch *amqp.Channel, h
 		fmt.Println("[ERROR] Make consume with tag failed", err)
 		panic(err)
 	}
-	forever := make(chan bool)
 	go func() {
 		for d := range msgs {
 			handler(&d)
@@ -87,7 +83,6 @@ func (r *Helper) MakeConsumeWithTag(name string, tag string, ch *amqp.Channel, h
 			}
 		}
 	}()
-	<-forever
 }
 
 func (r *Helper) PublishMessage(ch *amqp.Channel, queue string, form interface{}) error {
