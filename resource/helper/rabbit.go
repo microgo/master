@@ -53,7 +53,7 @@ func (r *Helper) MakeConsume(name string, ch *amqp.Channel, handler HandlerFunc)
 			handler(&d)
 			err := d.Ack(false)
 			if err != nil {
-				d.Ack(false)
+				panic(err)
 			}
 		}
 	}()
@@ -79,7 +79,7 @@ func (r *Helper) MakeConsumeWithTag(name string, tag string, ch *amqp.Channel, h
 			handler(&d)
 			err := d.Ack(false)
 			if err != nil {
-				d.Ack(false)
+				panic(err)
 			}
 		}
 	}()
